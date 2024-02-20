@@ -35,13 +35,14 @@ console.log(userAge.value);
 // subtract the discounts
     // subtract the 20% discount for the passengers underage (under 18)
 if (userAge < 18) {
-    console.log((tickeFullPrice / 100) * 80);
-    let ticketDiscount20 = ((tickeFullPrice / 100) * 80);
+    const ticketDiscount20 = ((tickeFullPrice / 100) * 80);
+    console.log(ticketDiscount20);
 
     // sottsubtract the 40% discount for the elder passengers (over 65)
 } else if (userAge >= 65) {
-    console.log((tickeFullPrice / 100) * 60);
-    let ticketDiscount40 = ((tickeFullPrice / 100) * 60);
+    const ticketDiscount40 = ((tickeFullPrice / 100) * 60);
+    console.log(ticketDiscount40);
+
 
     // no discount for adults passengers (18-64)
 } else {
