@@ -27,9 +27,14 @@ const userAgeField = document.getElementById('userAge');
 
 
 document.getElementById('submit').addEventListener('click', function(){
+    const kmNumber = Number(kmField.value);
+    const ageNumber = Number(userAgeField.value);
+
     console.log(userNameField.value);
-    console.log(userAgeField.value);
-    console.log(kmField.value);
+    console.log(ageNumber);
+    console.log(kmNumber);
+
+
 
     // Calculate the trip total price:
  // = 0.21€/km
@@ -37,19 +42,20 @@ document.getElementById('submit').addEventListener('click', function(){
  const pricePerKm = 0.21;
  console.log(pricePerKm);
 
- const tickeFullPrice = (pricePerKm * kmField.value);
+ const tickeFullPrice = (pricePerKm * kmNumber);
  console.log(tickeFullPrice);
+
 
 
 
 // subtract the discounts
     // subtract the 20% discount for the passengers underage (under 18)
-if (userAge < 18) {
+if (ageNumber < 18) {
     const ticketDiscount20 = ((tickeFullPrice / 100) * 80);
     console.log(ticketDiscount20.toFixed(2) + "€");
 
     // sottsubtract the 40% discount for the elder passengers (over 65)
-} else if (userAge >= 65) {
+} else if (ageNumber >= 65) {
     const ticketDiscount40 = ((tickeFullPrice / 100) * 60);
     console.log(ticketDiscount40.toFixed(2) + "€");
 
