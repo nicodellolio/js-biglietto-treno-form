@@ -41,20 +41,21 @@ document.getElementById('submit').addEventListener('click', function(){
  console.log(tickeFullPrice);
 
 
+
 // subtract the discounts
     // subtract the 20% discount for the passengers underage (under 18)
 if (userAge < 18) {
     const ticketDiscount20 = ((tickeFullPrice / 100) * 80);
-    console.log(ticketDiscount20 + "€").toFixed(2);
+    console.log(ticketDiscount20.toFixed(2) + "€");
 
     // sottsubtract the 40% discount for the elder passengers (over 65)
 } else if (userAge >= 65) {
     const ticketDiscount40 = ((tickeFullPrice / 100) * 60);
-    console.log(ticketDiscount40 + "€").toFixed(2);
+    console.log(ticketDiscount40.toFixed(2) + "€");
 
     // no discount for adults passengers (18-64)
 } else {
-    console.log(tickeFullPrice + "€").toFixed(2);
+    console.log(tickeFullPrice.toFixed(2) + "€");
 }
 })
 
