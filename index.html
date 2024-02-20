@@ -5,40 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
   <body>
 
-    <div class="prompt_container">
-        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-        <div class="user_prompt">
+    <main>
+
+        
+        <div class="prompt_container text-center pt-5">
+            <h1 class="fw-bolder fs-2 text-white mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <div class="user_prompt d-flex justify-content-center rounded-top-4 mx-3 py-3">
+                
+                <div class="mx-5">
+                    <div class="description fw-lighter mb-1">Il tuo nome</div>
+                    <input id="fullName" type="text" placeholder=" es. Mario Rossi">
+                </div>
+                
+                <div class="mx-5">
+                    <div class="description fw-lighter mb-1">La tua età</div>
+                    <input id="userAge" type="text" placeholder="0-99">
+                </div>
+                
+                <div class="mx-5">
+                    <div class="description fw-lighter mb-1">Km da percorrere</div>
+                    <input id="kmToRun" type="text" placeholder=" es. 650">
+                </div>
+                
+            </div>
             
-            <div>
-                <span>Il tuo nome</span>
-                <input id="fullName" type="text" placeholder=" es. Mario Rossi">
-            </div>
-
-            <div>
-                <span>La tua età</span>
-                <input id="userAge" type="text" placeholder="0-99">
-            </div>
-
-            <div>
-                <span>Km da percorrere</span>
-                <input id="kmToRun" type="text" placeholder=" es. 650">
+            <div class="buttons rounded-bottom-4 mb-5 mx-3 pb-4">
+                <input id="submit" type="submit" value="Genera">
+                <input id="clear" type="button" value="Annulla">
             </div>
             
         </div>
 
-        <div class="buttons">
-            <input id="submit" type="submit" value="Genera">
-            <input id="clear" type="button" value="Annulla">
+
+        
+        <div class="ticket_container text-center mx-3 rounded-4 pb-4">
+            <h1 class="fw-bolder fs-2 mb-4">IL TUO BIGLIETTO</h1>
+            <div class="text-start">
+                <h3 class="fw-bold ms-3">DETTAGLI PASSEGGERO</h3>
+            </div>
+            <div class="ticket d-flex justify-content-between mx-3 text-start pe-3">
+                <div class="name_box bg-primary pt-2 px-2">
+                    <h5 class="fw-bold mb-5">NOME PASSEGGERO</h5>
+                    <aside class="passenger_name fw-bold"></aside>
+                </div>
+                <div class="offer_box pt-2">
+                    <h6 class="fw-bold mb-5">Offerta</h6>
+                    <aside>Biglietto standard</aside>
+                </div>
+                <div class="cab_box pt-2">
+                    <h6 class="fw-bold mb-5">Carrozza</h6>
+                    <aside class="cab"></aside>
+                </div>
+                <div class="CP_box pt-2">
+                    <h6 class="fw-bold mb-5">Codice CP</h6>
+                    <aside class="CP"></aside>
+                </div>
+                <div class="price_box pt-2">
+                    <h6 class="fw-bold mb-5">Costo Biglietto</h6>
+                    <aside class="price"></aside>
+                </div>
+
+            </div>
+
+
         </div>
-
-    </div>
-
-
-
+        
+    </main>
+        
+        
 
 
 

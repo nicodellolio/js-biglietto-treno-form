@@ -1,3 +1,29 @@
 *{
     margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+main{
+ background-color: rgb(173, 20, 173);
+ height: 700px;
+}
+
+.user_prompt{
+    background-color: #fff;
+
+    input{
+        border-radius: 5px;
+    }
+}
+
+.buttons{
+    background-color: #fff;
+}
+.ticket_container{
+    background-color: #fff;
+}
+.ticket{
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
+
 }
